@@ -8,15 +8,17 @@
         <header>
             <h2>お問い合わせフォーム</h2>
         </header>        
-        <nav>
-            <ul>
-                <li><a href="#top">トップページ</a></li>
-                <li><a href="#favorite">人気投稿</a></li>
-                <li><a href="#recommenditem">エンジニアおすすめ商品</a></li>
-                <li><a href="#recommendnews">エンジニアおすすめ記事</a></li>
-                <li><a href="#pastposts">投稿ページ</a></li>
-            </ul><br>
-        </nav>
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#top">トップページ</a></li>
+                    <li><a href="#favorite">人気投稿</a></li>
+                    <li><a href="#recommenditem">エンジニアおすすめ商品</a></li>
+                    <li><a href="#recommendnews">エンジニアおすすめ記事</a></li>
+                    <li><a href="#pastposts">投稿ページ</a></li>
+                </ul><br>
+            </nav>
+        </aside>
         <main>
             <form action="confirm.php" method="POST">
                 <table border="3" style="border-collapse: collapse; width: 100%; max-width: 600px;">
@@ -56,7 +58,7 @@
                     </tr>
                 </table>
             </form>
-            <button type="submit" id="input">送信</button>
+            <input type="submit" value="送信" name="submit">
         </main>
     </body>
     <footer>
