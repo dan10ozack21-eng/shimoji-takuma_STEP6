@@ -57,8 +57,8 @@
                         </td>
                     </tr>
                 </table>
+                <input type="submit" value="送信" name="submit">
             </form>
-            <input type="submit" value="送信" name="submit">
         </main>
     </body>
     <footer>
