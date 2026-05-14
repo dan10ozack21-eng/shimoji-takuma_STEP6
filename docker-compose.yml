@@ -1,0 +1,7 @@
+services:
+  cytech_step6_test:
+    build: .
+    ports:
+      - 8084:80
+    volumes:
+      - .:/var/www/html
