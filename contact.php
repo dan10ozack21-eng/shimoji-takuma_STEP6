@@ -3,6 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <title>お問い合わせフォーム</title>
+        <style>
+            .target-table {
+                border: 3px solid black;
+                border-collapse: collapse;
+                width: 90%;
+                max-width: 600%;
+            }
+
+            .target-table th,
+            .target-table td {
+                border: 3px solid black;
+                padding: 10px;
+            }
+
+            .target-table th {
+                background-color: #f2f2f2;
+                width: 30%;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -21,38 +40,38 @@
         </aside>
         <main>
             <form action="confirm.php" method="POST">
-                <table border="3" style="border-collapse: collapse; width: 100%; max-width: 600px;">
+                <table class="target-table">
                     <tr>
-                        <th style="background-color: #f2f2f2; width: 30%; padding: 10px;">お名前</th>
-                        <td style="padding: 10px;">
+                        <th>お名前</th>
+                        <td>
                             <input type="text" id="name" name="name" size="40">
                         </td>
                     </tr>
 
                     <tr>
-                        <th style="background-color: #f2f2f2; padding: 10px;">会社名</th>
-                        <td style="padding: 10px;">
+                        <th>会社名</th>
+                        <td>
                             <input type="text" id="companyName" name="companyName" size="40">
                         </td>
                     </tr>
                     
                     <tr>
-                        <th style="background-color: #f2f2f2; padding: 10px;">メールアドレス</th>
-                        <td style="padding: 10px;">
+                        <th>メールアドレス</th>
+                        <td>
                             <input type="email" id="email" name="email" size="40">
                         </td>
                     </tr>
 
                     <tr>
-                        <th style="background-color: #f2f2f2; padding: 10px;">年齢</th>
-                        <td style="padding: 10px;">
+                        <th>年齢</th>
+                        <td>
                             <input type="text" id="age" name="age" size="40">
                         </td>
                     </tr>
 
                     <tr>
-                        <th style="background-color: #f2f2f2; padding; 10px">お問い合わせ内容</th>
-                        <td style="padding: 10px">
+                        <th>お問い合わせ内容</th>
+                        <td>
                             <textarea id="message" name="message" rows="8" style="width: 95%;" placeholder="お問い合わせ内容"></textarea>
                         </td>
                     </tr>
