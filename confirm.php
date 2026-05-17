@@ -99,7 +99,7 @@ $message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
             </div>
           </form>
         </main>
-
+      <script src="style.js"></script>
     </body>
     <footer>
     </footer>

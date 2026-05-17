@@ -45,7 +45,7 @@
             </div>
           <?php endif; ?>
 
-            <form action="confirm.php" method="POST">
+            <form id="contact-form" action="confirm.php" method="POST">
                 <table class="target-table">
                     <tr>
                         <th>お名前</th>
@@ -85,9 +85,10 @@
                 <input type="submit" value="送信" name="submit">
             </form>
         </main>
+      <script src="style.js"></script>
     </body>
     <footer>
-        <p>横のボタンを押すとfooterの背景色が変わります。</p>
+        <p>下のボタンを押すとfooterの背景色が変わります。</p>
         <button onclick="changeColor()">押してみてね！</button>
     </footer>
 </html>
