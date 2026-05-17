@@ -1,3 +1,11 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    header('Location: contact.php');
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
     <head>

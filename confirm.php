@@ -1,9 +1,25 @@
 <?php
-$name = htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8');
-$companyName = htmlspecialchars($_POST['companyName'], ENT_QUOTES, 'UTF-8');
-$email = htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8');
-$age = htmlspecialchars($_POST['age'], ENT_QUOTES, 'UTF-8');
-$message = htmlspecialchars($_POST['message'], ENT_QUOTES, 'UTF-8');
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    header('Location: contact.php');
+    exit;
+}
+
+$name = $_POST['name'] ?? '';
+$companyName = $_POST['companyName'] ?? '';
+$email = $_POST['email'] ?? '';
+$age = $_POST['age'] ?? '';
+$message = $_POST['message'] ?? '';
+
+if (empty($name) || empty($companyName) || empty($email) || empty($age) || empty($message)) {
+    header('Location: contact.php?error=empty');
+    exit;
+}
+
+$name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
+$companyName = htmlspecialchars($companyName, ENT_QUOTES, 'UTF-8');
+$email = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
+$age = htmlspecialchars($age, ENT_QUOTES, 'UTF-8');
+$message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
 ?>
 
 <!DOCTYPE html>
@@ -66,14 +82,22 @@ $message = htmlspecialchars($_POST['message'], ENT_QUOTES, 'UTF-8');
             </tr>
             <tr>
                 <th>お問い合わせ内容</th>
-                <td><?php echo $message; ?></td>
+                <td><?php echo nl2br($message); ?></td>
             </tr>
         </table>
 
+          <form action="send.php" method="POST">
+            <input type="hidden" name="name" value="<?php echo $name; ?>">
+            <input type="hidden" name="companyName" value="<?php echo $companyName; ?>">
+            <input type="hidden" name="email" value="<?php echo $email; ?>">
+            <input type="hidden" name="age" value="<?php echo $age; ?>">
+            <input type="hidden" name="message" value="<?php echo $message; ?>">
+
             <div style="margin-top: 10px;">
-                <input type="submit" value="送信"><br>
-                <input type="button" value="戻る" onclick=history.back()>
+                <input type="submit" value="送信" name="submit"><br>
+                <input type="button" value="戻る" onclick="history.back()">
             </div>
+          </form>
         </main>
 
     </body>

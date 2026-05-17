@@ -39,6 +39,12 @@
             </nav>
         </aside>
         <main>
+          <?php if (isset($_GET['error']) && $_GET['error'] === 'empty'): ?>
+            <div style="color: red; border: 1px solid red; padding: 10px; margin-bottom: 20px;">
+                未入力の項目があります。すべての項目の入力をお願いいたします。
+            </div>
+          <?php endif; ?>
+
             <form action="confirm.php" method="POST">
                 <table class="target-table">
                     <tr>
