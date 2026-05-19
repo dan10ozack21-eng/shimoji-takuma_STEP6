@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+}
+
+header {
+    background-color: #ffc0cb;
+    text-align: center;
+    padding: 20px;
+}
+
+aside {
+    width: 30%;
+    background-color: #7fffd4;
+    padding: 20px;
+}
+
+main {
+    flex: 1;
+    background-color: #fffacd;
+    padding: 20px;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+#button-area {
+    text-align: right;
+}
+
+#button-area input {
+    margin-bottom: 5px;
+    padding: 2px 8px;
+}
+
+footer {
+    background-color: #d3d3d3;
+    height: 50px;
+}

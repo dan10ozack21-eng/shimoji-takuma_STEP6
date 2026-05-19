@@ -46,12 +46,14 @@ $message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
                 width: 30%;
             }
         </style>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header>
             <h2>お問い合わせフォーム - 確認画面</h2>
         </header>
-        <aside class="sidebar">
+        <div class="container">
+          <aside class="sidebar">
             <nav>
                 <ul>
                     <li><a href="#top">トップページ</a></li>
@@ -61,9 +63,9 @@ $message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
                     <li><a href="#pastposts">投稿ページ</a></li>
                 </ul><br>
             </nav>
-        </aside>
-        <main>
-        <table class="target-table">
+          </aside>
+          <main>
+          <table class="target-table">
             <tr>
                 <th>お名前</th>
                 <td><?php echo $name; ?></td>
@@ -84,7 +86,7 @@ $message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
                 <th>お問い合わせ内容</th>
                 <td><?php echo nl2br($message); ?></td>
             </tr>
-        </table>
+          </table>
 
           <form action="send.php" method="POST">
             <input type="hidden" name="name" value="<?php echo $name; ?>">
@@ -93,12 +95,13 @@ $message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
             <input type="hidden" name="age" value="<?php echo $age; ?>">
             <input type="hidden" name="message" value="<?php echo $message; ?>">
 
-            <div style="margin-top: 10px;">
+            <div id="button-area" style="margin-top: 10px;">
                 <input type="submit" value="送信" name="submit"><br>
                 <input type="button" value="戻る" onclick="history.back()">
             </div>
           </form>
-        </main>
+          </main>
+        </div>
       <script src="style.js"></script>
     </body>
     <footer>
