@@ -57,14 +57,14 @@
                     <tr>
                         <th>会社名</th>
                         <td>
-                            <input type="text" id="companyName" name="companyName" size="40" autocomplete="organization">
+                            <input type="text" id="companyName" name="companyName" size="40">
                         </td>
                     </tr>
                     
                     <tr>
                         <th>メールアドレス</th>
                         <td>
-                            <input type="email" id="email" name="email" size="40" autocomplete="organization">
+                            <input type="email" id="email" name="email" size="40" autocomplete="email">
                         </td>
                     </tr>
 
