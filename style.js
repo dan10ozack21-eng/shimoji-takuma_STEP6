@@ -1,27 +1,28 @@
-const nullCheck = document.getElementById('submit');
+console.log("style.jsは正しく読み込まれました！");
+
 const contactForm = document.getElementById('contact-form');
 
-console.log("送信ボタンが押されました！");
+if (contactForm) {
+    console.log("フォームを発見しました。イベントを登録します：", contactForm);
 
-if (nullCheck && contactForm) {
     contactForm.addEventListener('submit', (event) => {
-    
-    // try {
+        console.log("送信イベントを検知しました。チェックを開始します。");
+
+        
         const name = document.getElementById('name').value;
         const companyName = document.getElementById('companyName').value;
         const email = document.getElementById('email').value;
         const age = document.getElementById('age').value;
         const message = document.getElementById('message').value;
 
-        console.log("全項目の取得に成功: ", name, companyName, email, age, message);
-
         if (name === '' || companyName === '' || email === '' || age === '' || message === '') {
-            event.preventDefault();
-            alert("未入力の項目があります。すべて入力してください。");
-        } 
-        // } catch (e) {
-           // console.error("エラー発生:", e.message);
-        // }
+            
+            event.preventDefault(); 
+            console.log("未入力項目があるため、送信をブロックしました。");
+            alert("必須項目が未入力です。入力内容をご確認ください。");
+        } else {
+            console.log("全項目入力済み。送信を許可します。");
+        }
     });
 }
 

@@ -50,21 +50,21 @@
                     <tr>
                         <th>お名前</th>
                         <td>
-                            <input type="text" id="name" name="name" size="40">
+                            <input type="text" id="name" name="name" size="40" autocomplete="name">
                         </td>
                     </tr>
 
                     <tr>
                         <th>会社名</th>
                         <td>
-                            <input type="text" id="companyName" name="companyName" size="40">
+                            <input type="text" id="companyName" name="companyName" size="40" autocomplete="organization">
                         </td>
                     </tr>
                     
                     <tr>
                         <th>メールアドレス</th>
                         <td>
-                            <input type="email" id="email" name="email" size="40">
+                            <input type="email" id="email" name="email" size="40" autocomplete="organization">
                         </td>
                     </tr>
 
