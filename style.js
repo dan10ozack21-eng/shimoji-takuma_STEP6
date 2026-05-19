@@ -1,4 +1,4 @@
-console.log("style.jsは正しく読み込まれました！");
+console.log("style.jsは正しく読み込まれました!");
 
 const contactForm = document.getElementById('contact-form');
 
@@ -21,7 +21,16 @@ if (contactForm) {
             console.log("未入力項目があるため、送信をブロックしました。");
             alert("必須項目が未入力です。入力内容をご確認ください。");
         } else {
-            console.log("全項目入力済み。送信を許可します。");
+            const confirmMessage = `下記の内容を本当に送信しますか？\n\n` +
+            `お名前⇒ ${name}\n` + `会社名⇒ ${companyName}\n` +
+            `メールアドレス⇒ ${email}\n` + `年齢⇒ ${age}\n` + `お問い合わせ内容⇒ ${message}`;
+
+            if (!confirm(confirmMessage)) {
+                event.preventDefault();
+                console.log("ユーザーが送信をキャンセルしました。");
+            } else {
+                console.log("ユーザーがOKを押しました。送信します。")
+            }
         }
     });
 }
@@ -41,3 +50,4 @@ function changeColor() {
         }
     }
 }
+
